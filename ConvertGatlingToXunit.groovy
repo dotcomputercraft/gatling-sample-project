@@ -6,6 +6,10 @@ import groovy.xml.MarkupBuilder
  * Suitable for jenkins job to be able to
  */
 
+def commandLineArgs = args[0]
+
+println "Command line args: $commandLineArgs" 
+
 def gatlingSimulationLog = findGatlingSimulationLog()
 
 def failures = getErrorsFromSimulationLog(gatlingSimulationLog)
